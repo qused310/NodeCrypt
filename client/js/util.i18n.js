@@ -18,14 +18,14 @@ const LANGUAGES = {
 			'meta.twitter_description': 'NodeCrypt is a zero-knowledge, end-to-end encrypted open source chat system where all encryption and decryption is done locally on the client side, and servers cannot access plaintext.',
 			
 			// Login and main UI
-			'ui.enter_node': 'Enter a Node',
+			'ui.enter_node': 'Enter a Room',
 			'ui.username': 'Username',
-			'ui.node_name': 'Node Name',
-			'ui.node_password': 'Node Password',
+			'ui.node_name': 'Room Name',
+			'ui.node_password': 'Room Password',
 			'ui.optional': '(optional)',
 			'ui.enter': 'ENTER',
 			'ui.connecting': 'Connecting...',
-			'ui.node_exists': 'Node already exists',
+			'ui.node_exists': 'Room already exists',
 			'ui.my_name': 'My Name',
 			'ui.members': 'Members',
 			'ui.message': 'Message',
@@ -100,16 +100,16 @@ const LANGUAGES = {
 			'help.how_to_start': '🚀 Quick Start',
 			'help.step_username': 'Enter Username',
 			'help.step_username_desc': 'Choose a display name for the room, can be any name you like',
-			'help.step_node_name': 'Set Node Name',
+			'help.step_node_name': 'Set Room Name',
 			'help.step_node_name_desc': 'Unique identifier for the room, equivalent to room number',
-			'help.step_password': 'Set Node Password',
+			'help.step_password': 'Set Room Password',
 			'help.step_password_desc': 'Used to distinguish different rooms while participating in encryption process to enhance security',
 			'help.step_join': 'Click "Join Room"',
 			'help.step_join_desc': 'System will automatically generate encryption keys and start secure chatting',
 			'help.security_features': '🔑 Security Features',			'help.e2e_encryption': '🛡️ End-to-End Encryption',
 			'help.e2e_encryption_desc': 'Uses AES-256 + ECDH encryption algorithm, messages can only be decrypted by you and the recipient',
 			'help.password_enhanced_encryption': '🔐 Password Enhanced Encryption',
-			'help.password_enhanced_encryption_desc': 'Node password directly participates in encryption key generation, providing additional security protection layer',
+			'help.password_enhanced_encryption_desc': 'Room password directly participates in encryption key generation, providing additional security protection layer',
 			'help.no_history': '🚫 Zero History Records',
 			'help.no_history_desc': 'All messages exist only in current session, offline users cannot get historical messages',
 			'help.anonymous_communication': '🎭 Complete Anonymity',
@@ -117,13 +117,13 @@ const LANGUAGES = {
 			'help.decentralized': '🌐 Decentralized',
 			'help.decentralized_desc': 'Supports self-hosted deployment, server does not participate in encryption/decryption process',			'help.usage_tips': '💡 Usage Tips',
 			'help.important_note': '⚠️ Important Note',
-			'help.room_isolation_note': 'Same node name but different passwords are two completely independent rooms that cannot communicate with each other.',
+			'help.room_isolation_note': 'Same room name but different passwords are two completely independent rooms that cannot communicate with each other.',
 			'help.tip_private_chat': 'Private Chat',
-			'help.tip_private_chat_desc': 'Use complex node names and passwords, share only with specific people',
+			'help.tip_private_chat_desc': 'Use complex room names and passwords, share only with specific people',
 			'help.tip_group_chat': 'Group Chat',
-			'help.tip_group_chat_desc': 'Use simple and memorable node names and passwords for easy multi-user joining',
+			'help.tip_group_chat_desc': 'Use simple and memorable room names and passwords for easy multi-user joining',
 			'help.tip_security_reminder': 'Security Reminder',
-			'help.tip_security_reminder_desc': 'Both node name and password must be exactly the same to enter the same room',
+			'help.tip_security_reminder_desc': 'Both room name and password must be exactly the same to enter the same room',
 			'help.tip_password_strategy': 'Password Strategy',
 			'help.tip_password_strategy_desc': 'Recommend using strong passwords containing letters, numbers and symbols',
 		}
@@ -142,14 +142,14 @@ const LANGUAGES = {
 			'meta.twitter_description': 'NodeCrypt 是一个端到端加密的开源聊天系统，所有加密解密均在客户端本地完成，服务器无法获取明文。',
 			
 			// Login and main UI
-			'ui.enter_node': '进入新的节点',
+			'ui.enter_node': '进入新的房间',
 			'ui.username': '用户名',
-			'ui.node_name': '节点名称',
-			'ui.node_password': '节点密码',
+			'ui.node_name': '房间名称',
+			'ui.node_password': '房间密码',
 			'ui.optional': '（可选）',
 			'ui.enter': '确定',
 			'ui.connecting': '连接中...',
-			'ui.node_exists': '此节点已存在',
+			'ui.node_exists': '此房间已存在',
 			'ui.my_name': '我的名字',
 			'ui.members': '在线成员',
 			'ui.message': '消息',
@@ -225,9 +225,9 @@ const LANGUAGES = {
 			'help.how_to_start': '🚀 快速开始',
 			'help.step_username': '输入用户名',
 			'help.step_username_desc': '选择一个在房间中显示的昵称，可以是任何您喜欢的名称',
-			'help.step_node_name': '设置节点名',
+			'help.step_node_name': '设置房间名',
 			'help.step_node_name_desc': '房间的唯一标识符，相当于房间号',
-			'help.step_password': '设置节点密码',
+			'help.step_password': '设置房间密码',
 			'help.step_password_desc': '用于区分不同房间，同时参与加密过程，提升安全性',
 			'help.step_join': '点击"加入房间"',
 			'help.step_join_desc': '系统将自动生成加密密钥，开始安全聊天',
@@ -235,7 +235,7 @@ const LANGUAGES = {
 			'help.e2e_encryption': '🛡️ 端到端加密',
 			'help.e2e_encryption_desc': '使用 AES-256 + ECDH 加密算法，消息仅您和接收者可解密',
 			'help.password_enhanced_encryption': '🔐 密码增强加密',
-			'help.password_enhanced_encryption_desc': '节点密码直接参与加密密钥生成，提供额外的安全保护层',
+			'help.password_enhanced_encryption_desc': '房间密码直接参与加密密钥生成，提供额外的安全保护层',
 			'help.no_history': '🚫 零历史记录',
 			'help.no_history_desc': '所有消息仅存在于当前会话，离线用户无法获取历史消息',
 			'help.anonymous_communication': '🎭 完全匿名',
@@ -243,13 +243,13 @@ const LANGUAGES = {
 			'help.decentralized': '🌐 去中心化',
 			'help.decentralized_desc': '支持自托管部署，服务器不参与加密解密过程',			'help.usage_tips': '💡 使用技巧',
 			'help.important_note': '⚠️ 重要提示',
-			'help.room_isolation_note': '相同节点名但不同密码的是两个完全独立的房间，无法相互通信。',
+			'help.room_isolation_note': '相同房间名但不同密码的是两个完全独立的房间，无法相互通信。',
 			'help.tip_private_chat': '私人对话',
-			'help.tip_private_chat_desc': '使用复杂的节点名和密码，只分享给特定人员',
+			'help.tip_private_chat_desc': '使用复杂的房间名和密码，只分享给特定人员',
 			'help.tip_group_chat': '群聊',
-			'help.tip_group_chat_desc': '使用简单易记的节点名和密码，方便多人加入',
+			'help.tip_group_chat_desc': '使用简单易记的房间名和密码，方便多人加入',
 			'help.tip_security_reminder': '安全提醒',
-			'help.tip_security_reminder_desc': '节点名和密码都需要完全一致才能进入同一个房间',
+			'help.tip_security_reminder_desc': '房间名和密码都需要完全一致才能进入同一个房间',
 			'help.tip_password_strategy': '密码策略',
 			'help.tip_password_strategy_desc': '建议使用包含字母、数字和符号的强密码',
 		}
@@ -349,7 +349,7 @@ export function updateStaticTexts() {
 	// Update login title
 	const loginTitle = document.getElementById('login-title');
 	if (loginTitle) {
-		loginTitle.textContent = t('ui.enter_node', 'Enter a Node');
+		loginTitle.textContent = t('ui.enter_node', 'Enter a Room');
 	}
 		// Update login form content with new translations
 	const loginFormContainer = document.getElementById('login-form');
@@ -366,10 +366,10 @@ export function updateStaticTexts() {
 		// 使用自定义事件更新侧边栏用户名，而不是动态导入
 		window.dispatchEvent(new CustomEvent('updateSidebarUsername'));
 	}
-		// Update "Enter a Node" text in sidebar
+	// Update "Enter a Room" text in sidebar
 	const joinRoomText = document.getElementById('join-room-text');
 	if (joinRoomText) {
-		joinRoomText.textContent = t('ui.enter_node', 'Enter a Node');
+		joinRoomText.textContent = t('ui.enter_node', 'Enter a Room');
 	}
 	
 	// Update Members title in rightbar

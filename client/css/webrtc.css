@@ -1,0 +1,320 @@
+/* WebRTC 通话功能样式 */
+/* WebRTC call functionality styles */
+
+/* 通话按钮样式 */
+.call-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.new-message-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.call-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 18px;
+    background: var(--accent-color, #007bff);
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0;
+}
+
+.call-btn:hover {
+    background: var(--accent-hover, #0056b3);
+    transform: scale(1.05);
+}
+
+.call-btn:active {
+    transform: scale(0.95);
+}
+
+.call-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.audio-call-btn {
+    background: #28a745;
+}
+
+.audio-call-btn:hover {
+    background: #218838;
+}
+
+.video-call-btn {
+    background: #17a2b8;
+}
+
+.video-call-btn:hover {
+    background: #138496;
+}
+
+/* 通话窗口样式 */
+.call-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 480px;
+    height: 360px;
+    background: var(--bg-color, #fff);
+    border: 1px solid var(--border-color, #ddd);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.call-window.hidden {
+    display: none;
+}
+
+.call-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: var(--accent-color, #007bff);
+    color: white;
+}
+
+.call-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.call-close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.call-close-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.call-content {
+    height: calc(100% - 60px);
+    display: flex;
+    flex-direction: column;
+}
+
+/* 视频容器样式 */
+.video-container {
+    flex: 1;
+    position: relative;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#local-video {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 120px;
+    height: 90px;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    background: #333;
+    object-fit: cover;
+    z-index: 2;
+}
+
+#remote-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #333;
+}
+
+/* 通话控制按钮样式 */
+.call-controls {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px;
+    background: var(--bg-secondary, #f8f9fa);
+    border-top: 1px solid var(--border-color, #ddd);
+}
+
+.control-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0;
+}
+
+.control-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.control-btn:hover {
+    transform: scale(1.05);
+}
+
+.control-btn:active {
+    transform: scale(0.95);
+}
+
+.mute-btn {
+    background: #6c757d;
+    color: white;
+}
+
+.mute-btn:hover {
+    background: #5a6268;
+}
+
+.mute-btn.muted {
+    background: #dc3545;
+}
+
+.mute-btn.muted:hover {
+    background: #c82333;
+}
+
+.video-btn {
+    background: #17a2b8;
+    color: white;
+}
+
+.video-btn:hover {
+    background: #138496;
+}
+
+.video-btn.video-off {
+    background: #dc3545;
+}
+
+.video-btn.video-off:hover {
+    background: #c82333;
+}
+
+.hangup-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.hangup-btn:hover {
+    background: #c82333;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .call-window {
+        width: 90vw;
+        height: 60vh;
+        min-height: 300px;
+    }
+    
+    #local-video {
+        width: 80px;
+        height: 60px;
+        top: 8px;
+        right: 8px;
+    }
+    
+    .call-controls {
+        gap: 12px;
+        padding: 12px;
+    }
+    
+    .control-btn {
+        width: 42px;
+        height: 42px;
+    }
+    
+    .control-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* 暗色主题适配 */
+[data-theme="dark"] .call-window {
+    background: var(--bg-color);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .call-controls {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+/* 动画效果 */
+@keyframes callPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.call-btn.calling {
+    animation: callPulse 1s infinite;
+}
+
+/* 通话状态指示器 */
+.call-status {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 12px 24px;
+    border-radius: 8px;
+}
+
+/* 无视频时的占位符 */
+.video-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+}
+
+.video-placeholder svg {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 12px;
+    opacity: 0.7;
+}
